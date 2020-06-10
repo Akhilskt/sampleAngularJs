@@ -1,0 +1,40 @@
+<div class="row">
+        <aside class="col-sm-12">
+            <div class="card mx-auto" style="width:450px">
+                <article class="card-body">
+                    <a href="#" ui-sref="login" class="float-right btn btn-outline-primary">Sign In</a>
+                    <h4 class="card-title mb-4 mt-1">Sign Up</h4>
+                    <form  name="signUpForm" ng-submit="submitUser(signUpForm.$valid)">
+                        <div class="form-group">
+                            <label>Your email</label>
+                            <input class="form-control" 
+                                ng-model="user.mail" placeholder="Email" type="email" name="email">
+                                <small ng-show="signUpForm.email.$invalid && !signUpForm.email.$pristine" class="text-danger">
+                                    Please enter a valid email.
+                                </small>
+                        </div>
+                        <div class="form-group">
+                            <label>Your password</label>
+                            <input class="form-control" ng-model="user.password" placeholder="******" type="password">
+                        </div>
+                        <div class="form-group">
+                            <label>Your username</label>
+                            <input class="form-control" name="username" 
+                            ng-model="user.username"
+                            ng-minlength="3" ng-maxlength="8" 
+                            placeholder="User name" type="text">
+                            <small ng-show="signUpForm.username.$error.minlength" class="text-danger">
+                                Username is too short.
+                            </small>
+                            <small ng-show="signUpForm.username.$error.maxlength" class="text-danger">
+                                Username is too long.
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block" ng-disabled="signUpForm.$invalid"> Login </button>
+                        </div>
+                    </form>
+                </article>
+            </div>
+        </aside>
+    </div>
