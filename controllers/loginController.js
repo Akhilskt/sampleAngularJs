@@ -10,7 +10,7 @@ function loginController($scope, $http) {
                 method: 'GET',
                 url: 'http://localhost:3000/auth/signin',
                 headers: {
-                    Authorization: 'Basic '+window.btoa($scope.user.mail+':'+$scope.user.password)
+                    Authorization: 'Basic ' + window.btoa($scope.user.mail + ':' + $scope.user.password)
                 },
             }).then(function successCallback(response) {
                 alert('Successfully Signed In');

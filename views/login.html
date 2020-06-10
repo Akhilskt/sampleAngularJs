@@ -4,23 +4,21 @@
             <article class="card-body">
                 <a href="#" ui-sref="register" class="float-right btn btn-outline-primary">Sign Up</a>
                 <h4 class="card-title mb-4 mt-1">Sign in</h4>
-                <form  name="loginForm" ng-submit="submit(loginForm.$valid)">
+                <form name="loginForm" ng-submit="submit(loginForm.$valid)">
                     <div class="form-group">
                         <label>Your email</label>
-                        <input class="form-control" 
-                        ng-model="user.mail" placeholder="Email" type="email" name="email">
+                        <input class="form-control" ng-model="user.mail" placeholder="Email" type="email" name="email">
                         <small ng-show="loginForm.email.$invalid && !loginForm.email.$pristine" class="text-danger">
                             Please enter a valid email.
-                        </small>  
-                        <!-- <p ng-show="loginForm.email.$invalid && !loginForm.email.$pristine" 
-                        class="form-text">Please enter a valid email.</p> -->
+                        </small>
                     </div>
                     <div class="form-group">
                         <label>Your password</label>
                         <input class="form-control" ng-model="user.password" placeholder="******" type="password">
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block" ng-disabled="loginForm.$invalid"> Login </button>
+                        <button type="submit" class="btn btn-primary btn-block" ng-disabled="loginForm.$invalid"> Login
+                        </button>
                     </div>
                 </form>
             </article>

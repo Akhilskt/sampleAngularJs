@@ -1,10 +1,10 @@
 angular.module('routerApp')
-    .controller('SignUpController', ['$scope','$http', '$location', signUpController]);
+    .controller('SignUpController', ['$scope', '$http', '$location', signUpController]);
 
-function signUpController($scope,$http,$location) {
+function signUpController($scope, $http, $location) {
     $scope.user = {};
-    $scope.submitUser = function(isValid) {
-        if(isValid){
+    $scope.submitUser = function (isValid) {
+        if (isValid) {
             $http({
                 method: 'POST',
                 url: 'http://localhost:3000/auth/signup',
@@ -17,4 +17,4 @@ function signUpController($scope,$http,$location) {
             });
         }
     }
- }
+}
