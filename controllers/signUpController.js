@@ -7,7 +7,7 @@ function signUpController($scope, $http, $location) {
         if (isValid) {
             $http({
                 method: 'POST',
-                url: 'http://localhost:3000/auth/signup',
+                url: 'https://c720g.sse.codesandbox.io/auth/signup', //hard coding for deployment on live server
                 data: JSON.stringify($scope.user)
             }).then(function successCallback(response) {
                 alert('Successfully Signed UP');
