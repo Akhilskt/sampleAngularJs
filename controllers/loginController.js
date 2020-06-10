@@ -8,7 +8,7 @@ function loginController($scope, $http) {
             console.log(window.btoa("user:pass"));
             $http({
                 method: 'GET',
-                url: 'http://localhost:3000/auth/signin',
+                url: 'https://c720g.sse.codesandbox.io/auth/signin', //hardcoding for deployment on live server
                 headers: {
                     Authorization: 'Basic ' + window.btoa($scope.user.mail + ':' + $scope.user.password)
                 },
